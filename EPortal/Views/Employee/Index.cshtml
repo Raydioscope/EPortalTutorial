@@ -1,0 +1,67 @@
+﻿@model List<EPortal.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h2>List of Employees</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[0].EmployeeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].EmployeeCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].EmployeeSex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].EmployeeAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].JoiningDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].EmailID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeSex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JoiningDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { empid = item.EmployeeID }) |
+            @Html.ActionLink("Employee Details", "Details", new { empid = item.EmployeeID , name = item.EmployeeName }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeID })
+        </td>
+    </tr>
+}
+
+</table>

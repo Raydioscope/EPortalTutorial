@@ -1,0 +1,22 @@
+﻿@model EPortal.Models.Employee
+
+
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@ViewBag.message
+<p>@Model.EmployeeName</p>
+
+<p>@Model.EmployeeCity</p>
+
+<p>@Model.EmployeeAge</p>
+
+<p>@Model.EmployeeSex</p>
+
+
+<p>@Model.JoiningDate</p>
+<p>@Model.EmailID</p>
+
+@Html.CheckBox("Gender",true)
+

@@ -1,0 +1,67 @@
+﻿@model EPortal.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeSex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeSex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JoiningDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JoiningDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>
